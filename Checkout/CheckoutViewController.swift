@@ -23,6 +23,7 @@ public protocol CheckoutViewControllerDelegate: class {
     func checkoutViewController(_ controller: CheckoutViewController, failedWithError error: NSError)
 }
 
+@objc
 open class CheckoutViewController: UIViewController, CheckoutPaymentFieldDelegate {
     
     open var request: CheckoutRequest!

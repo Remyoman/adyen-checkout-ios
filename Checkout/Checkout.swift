@@ -16,7 +16,7 @@ public protocol PaymentData {
 }
 
 
-open class Checkout {
+open class Checkout : NSObject {
     
     /// Use test Adyen Backend. Default: false
     open var useTestBackend = false
@@ -28,11 +28,11 @@ open class Checkout {
     open var publicKey: String?
     
     
-    open static let version = "1.0.0"
+    open var version: String = { "1.0.0" }()
     
     open static let shared = Checkout()
     
-    fileprivate init (){}
+    override fileprivate init (){}
 
     /**
      Fetches the Public encryption key from Adyen backend
