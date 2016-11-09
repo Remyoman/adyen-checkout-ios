@@ -17,13 +17,12 @@ public enum CheckoutAuthorizationStatus : Int {
     case failure
 }
 
-
+@objc
 public protocol CheckoutViewControllerDelegate: class {
     func checkoutViewController(_ controller: CheckoutViewController, authorizedPayment payment: CheckoutPayment)
     func checkoutViewController(_ controller: CheckoutViewController, failedWithError error: NSError)
 }
 
-@objc
 open class CheckoutViewController: UIViewController, CheckoutPaymentFieldDelegate {
     
     open var request: CheckoutRequest!
