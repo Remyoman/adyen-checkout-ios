@@ -9,7 +9,7 @@
 import UIKit
 
 open class CardNumberField: CheckoutTextField {
-    var card = CardType.Unknown {
+    public var card = CardType.Unknown {
         didSet {
             resetCard()
         }
